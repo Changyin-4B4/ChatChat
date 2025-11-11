@@ -1,0 +1,23 @@
+{
+  "_description": "变量关键词映射配置文件，支持数值浮动效果",
+  "_format_explanation": {
+    "stage_mapping": "阶段自变量到因变量的映射规则",
+    "min_value": "最小值",
+    "max_value": "最大值"
+  },
+  "好感度_keywords": {
+    "positive": { "keywords": ["喜欢"], "min_value": 4.0, "max_value": 6.0 },
+    "negative": { "keywords": ["厌恶"], "min_value": -6.0, "max_value": -4.0 }
+  },
+  "饥饿度_keywords": {
+    "positive": { "keywords": ["饱腹"], "min_value": 4.0, "max_value": 6.0 },
+    "negative": { "keywords": ["饥饿"], "min_value": -6.0, "max_value": -4.0 }
+  },
+  "日期_keywords": {
+    "positive": { "keywords": ["增加"], "min_value": 45.0, "max_value": 45.0 },
+    "negative": { "keywords": ["减少"], "min_value": 80.0, "max_value": 80.0 }
+  },
+  "游戏内的天数_reset": {
+    "keywords": ["重置"]
+  }
+}

@@ -1,0 +1,2 @@
+<天气>
+在是{element_0},{element_1},{element_2}.{element_3}.

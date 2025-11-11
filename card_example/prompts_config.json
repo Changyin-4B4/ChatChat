@@ -1,0 +1,84 @@
+{
+  "position_0": 
+  {
+    "simple": 
+    {
+      "simple_info_1": {"keywords": [], "depth": 0, "file": "information/worldview.txt"},
+      "simple_info_2": {"keywords": [], "depth": 0, "file": "information/character_user.txt"},
+      "simple_info_3": {"keywords": [], "depth": 0, "file": ""}
+    },
+    "complex": 
+    {
+      "complex_info_1": {
+        "keywords": [], 
+        "depth": 0,
+        "base_file": "information/complex_info1_base.txt",
+        "variable_binding": "好感度",
+        "variable_binding_method":[0],
+        "stages": {
+          "part_0":{
+            "stage_0": "information/complex_info1_stage1.txt",
+            "stage_1": "information/complex_info1_stage2.txt",
+            "stage_2": "information/complex_info1_stage3.txt"
+          }
+        }
+      },
+      "complex_info_test": {
+        "keywords": [], 
+        "depth": 0,
+        "base_file": "information/complex_info_test_base.txt",
+        "variable_binding": ["好感度","饥饿度"],
+        "variable_binding_method": [[0,1]],
+        "stages": {
+          "part_0":{
+            "stage_1_1": "information/complex_info_test_stage2_2.txt",
+            "stage_1_2": "information/complex_info_test_stage2_3.txt",
+            "stage_2_1": "information/complex_info_test_stage3_2.txt",
+            "stage_2_2": "information/complex_info_test_stage3_3.txt"
+          }
+        }
+      }
+    }
+  },
+  "position_1": 
+  {
+    "simple": 
+    {
+      "simple_info_1": {"keywords": [], "depth": 0, "file": ""},
+      "simple_info_2": {"keywords": [], "depth": 0, "file": ""},
+      "simple_info_3": {"keywords": [], "depth": 0, "file": ""}
+    },
+    "complex": 
+    {
+      "complex_info_1": {
+        "keywords": [], 
+        "depth": 0,
+        "base_file": "information/month_base.txt",
+        "variable_binding": "日期",
+        "variable_binding_method":[0,1,3],
+        "stages": {
+          "part_0":{
+            "stage_0": "information/month_1.txt",
+            "stage_1": "information/month_2.txt",  
+            "stage_2": "information/month_3.txt",
+            "stage_3": "information/month_4.txt",
+            "stage_4": "information/month_5.txt",
+            "stage_5": "information/month_6.txt",
+            "stage_6": "information/month_7.txt",
+            "stage_7": "information/month_8.txt",
+            "stage_8": "information/month_9.txt",
+            "stage_9": "information/month_10.txt",
+            "stage_10": "information/month_11.txt",
+            "stage_11": "information/month_12.txt"
+          },
+          "part_1":{
+
+          },
+          "part_2":{
+
+          }
+        }
+      }
+    }
+  }
+}

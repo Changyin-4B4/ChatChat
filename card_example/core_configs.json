@@ -1,0 +1,39 @@
+{
+  "LENGTH_LIMIT": [600,800],
+  "USER_NAME": "布雷德",
+  "CHAT_METHOD": 0,
+  "MEMORY_DEPTH": 10,
+  "JUDGER_MEMORY_DEPTH": 10,
+  "DEFAULT_OPENING": "information/first_message.txt",
+  "API_PROVIDERS": {
+    "deepseek": {
+      "api_key": "",
+      "base_url": "https://api.deepseek.com"
+    },
+    "siliconflow": {
+      "api_key": "",
+      "base_url": "https://api.siliconflow.cn/v1"
+    },
+    "gemini": {
+      "api_key": "",
+      "base_url": ""
+    },
+    "kimi": {
+      "api_key": "",
+      "base_url": "https://api.moonshot.ai/v1"
+    }
+  },
+  "DEFAULT_WORKFLOW_CONFIG": {
+    "stages": ["pre_process", "create", "post_process"],
+    "api_configs": {
+      "pre_process": { "provider": "deepseek", "model": "deepseek-reasoner" },
+      "create": { "provider": "kimi", "model": "kimi-k2-thinking" },
+      "post_process": { "provider": "deepseek", "model": "deepseek-reasoner" }
+    },
+    "prompt_configs": {
+      "pre_process": "judger_prompt_pre.yaml",
+      "create": "prompt.yaml",
+      "post_process": "judger_prompt_post.yaml"
+    }
+  }
+}

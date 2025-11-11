@@ -1,0 +1,66 @@
+{
+  "variables": [
+    {
+      "name": "好感度",
+      "var_type": "stage_independent",
+      "update_type": "llm_fuzzy",
+      "update_config": "update&reset/exp_update.txt",
+      "pre_update": false,
+      "initial_value": 0.0,
+      "min_value": 0.0,
+      "max_value": 100.0,
+      "reset_type": "llm",
+      "reset_config": "update&reset/exp_reset.txt",
+      "relative_name": "情感阶段",
+      "relative_method": "ladder",
+      "relative_stage_config": [20.0, 50.0],
+      "relative_description": ["陌生", "熟悉", "在意"]
+    },
+    {
+      "name": "游戏内的天数",
+      "var_type": "record",
+      "update_type": "llm_fuzzy",
+      "update_config": "update&reset/days_update.txt",
+      "initial_value": 0.0,
+      "min_value": 0.0,
+      "max_value": "inf",
+      "update_constraint": [
+        [1, "好感度"]
+      ]
+    },
+    {
+      "name": "日期",
+      "var_type": "stage_independent",
+      "update_type": "llm_fuzzy",
+      "update_config": "update&reset/days_update.txt",
+      "pre_update": true,
+      "initial_value": 0.0,
+      "min_value": 0.0,
+      "relative_name": "时间",
+      "relative_method": "cycle",
+      "relative_stage_config": [360, 4, 10, 3, 12],
+      "relative_description": [
+        ["凌晨", "上午", "下午", "晚上"],
+        ["1天", "2天", "3天", "4天", "5天", "6天", "7天", "8天", "9天", "10天"],
+        ["上旬", "中旬", "下旬"],
+        ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"]
+      ]
+    },
+    {
+      "name": "饥饿度",
+      "var_type": "stage_independent",
+      "update_type": "llm_fuzzy",
+      "update_config": "update&reset/hunger_update.txt",
+      "pre_update": false,
+      "initial_value": 0.0,
+      "min_value": -100.0,
+      "max_value": 100.0,
+      "reset_type": "llm",
+      "reset_config": "update&reset/hunger_reset.txt",
+      "relative_name": "饥饿阶段",
+      "relative_method": "ladder",
+      "relative_stage_config": [50.0, 80.0],
+      "relative_description": ["饱腹", "饥饿", "濒死"]
+    }
+  ]
+}
